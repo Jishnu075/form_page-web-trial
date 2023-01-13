@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="/script.js"></script>
+
+    <title>Form</title>
+  </head>
+  <body>
+    <!-- 
+    full name 
+    email
+    phone no 
+    username
+    password
+    dob
+-->
+    <div class="container">
+      <!-- left image page -->
+      <div class="form-logo-container">
+        <p class="logo-text">
+          Everywhere <br />
+          you want to be
+        </p>
+        <img src="assets/images/coffee_call.png" alt="" class="logo-img" />
+      </div>
+      <!-- right form page -->
+      <div class="form-content-container">
+        <form action="" name="registration form">
+          <div class="form-title">Create Account</div>
+
+          <input
+            type="text"
+            placeholder="Full Name"
+            id="fullname"
+            class="text-input"
+          /><span id="fullname-err" class="err-msg hidden">
+            *should only contain alphabets</span
+          >
+          <input
+            type="text"
+            placeholder="Email Address"
+            id="email"
+            class="text-input"
+          /><span id="email-err" class="err-msg hidden"
+            >*should have a proper email account</span
+          >
+          <input
+            type="text"
+            placeholder="Phone Number"
+            id="phone-number"
+            class="text-input"
+          /><span id="pn-err" class="err-msg hidden"
+            >*should have 10 digits with 6,7,8,9 as starting</span
+          >
+          <input
+            type="text"
+            placeholder="Username"
+            id="username"
+            class="text-input"
+          /><span id="username-err" class="err-msg hidden"
+            >*should start with an alphabet with a total length more than
+            6</span
+          >
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            class="text-input"
+          /><span id="password-err" class="err-msg hidden"
+            >*should have a strong password</span
+          >
+          <div class="terms-area">
+            <input type="checkbox" id="terms-checkbox" class="checkbox" /><span
+              id="checkbox-err"
+            ></span>
+            <label for="terms" id="terms"
+              >Agree to terms of service and privacy policy</label
+            >
+          </div>
+          <button type="button" class="signup-botton" onclick="isAllValid()">
+            Sign Up
+          </button>
+          <div class="err-msgs">
+            <div id="is-fullname-err" class="err-msg hidden">
+              Full Name must not contain numbers or other characters !
+            </div>
+            <div id="is-email-err" class="err-msg hidden">
+              Make sure the given email is valid !
+            </div>
+            <div id="is-phone-err" class="err-msg hidden">
+              Phone number should have 10 digits starting with 6,7,8,9 !
+            </div>
+            <div id="is-username-err" class="err-msg hidden">
+              User Name should start with 6 alphabets followed by valid
+              characters !
+            </div>
+            <div id="is-password-err" class="err-msg hidden">
+              Passwords should have atleast: 1 uppercase alphabet, 1 symbol, and
+              1 number !
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
